@@ -17,3 +17,5 @@ class Movie(models.Model):
     genre = models.ForeignKey(Genre, on_delete=models.CASCADE)
     date_created = models.DateTimeField(default=timezone.now)
 
+    def __str__(self):
+        return self.title
