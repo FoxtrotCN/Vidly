@@ -8,3 +8,7 @@ def index(request):
     movies = Movie.objects.all()
     context = {'movies': movies}
     return render(request, 'movies/index.html', context)
+
+
+def detail(request, movie_id):
+    return HttpResponse(movie_id)
